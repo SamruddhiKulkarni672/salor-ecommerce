@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	overflow-x: hidden;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* styles/globals.css or global tailwind file */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+input:-webkit-autofill {
+	transition: background-color 9999s ease-in-out 0s;
+	-webkit-text-fill-color: #000 !important;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-50px) rotate(0deg);
+		opacity: 0.9;
+	}
+	50% {
+		transform: translateY(50vh) rotate(180deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100vh) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.leaf-animation {
+	position: absolute;
+	top: -50px;
+	animation: fall 15s linear infinite;
+}
+
+.leaf-0 {
+	animation-duration: 10s;
+}
+.leaf-1 {
+	animation-duration: 13s;
+}
+.leaf-2 {
+	animation-duration: 16s;
+}
+.leaf-3 {
+	animation-duration: 11s;
+}
+.leaf-4 {
+	animation-duration: 14s;
+}
+.leaf-5 {
+	animation-duration: 17s;
+}
